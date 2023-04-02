@@ -16,7 +16,7 @@
         justify-content: center;
 
         span {
-          font-size: 24px;
+          font-size: 20px;
           font-weight: bold;
         }
 
@@ -46,10 +46,21 @@
                 max-height: 40px;
                 aspect-ratio: 1;
               }
+
+              span {
+                text-align: center;
+              }
             }
 
             &.is-playing {
               background-color: #d5d5d5;
+            }
+
+            &.victories {
+              min-width: 70px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
           }
         }
