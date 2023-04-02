@@ -1,0 +1,24 @@
+@import '../../styles/built-in\ tags.scss';
+
+.container {
+  height: 100%;
+
+  .row-list {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 2px;
+    .row-item {
+      flex: 1;
+      .column-list {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 2px;
+        .column-item {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

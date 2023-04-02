@@ -1,0 +1,8 @@
+<button class="container" (click)="onClick()">
+  <ng-container *ngIf="symbol === symbols.CIRCLE">
+    <svg app-circle-svg></svg>
+  </ng-container>
+  <ng-container *ngIf="symbol === symbols.CROSS">
+    <svg app-cross-svg></svg>
+  </ng-container>
+</button>

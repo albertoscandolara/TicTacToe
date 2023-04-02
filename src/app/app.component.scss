@@ -1,0 +1,93 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .header,
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.header {
+      .top-header,
+      .game-data {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        span {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        &.top-header {
+          justify-content: right;
+        }
+        &.game-data {
+          display: flex;
+          align-items: center;
+          gap: 5%;
+
+          .player,
+          .victories {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &.player {
+              gap: 10px;
+              padding: 10px 5%;
+
+              &.player-two {
+                flex-direction: row-reverse;
+              }
+
+              svg {
+                max-height: 40px;
+                aspect-ratio: 1;
+              }
+            }
+
+            &.is-playing {
+              background-color: #d5d5d5;
+            }
+          }
+        }
+      }
+    }
+    &.body {
+      min-height: 0;
+      width: 100%;
+      flex: 1;
+        .table {
+          height: 100%;
+          width: 100%;
+        }
+    }
+  }
+}
+
+
+.end-game-board {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .end-game-message,
+  .end-game-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.end-game-message {
+      min-height: 0;
+      flex: 1;
+    }
+
+    &.end-game-buttons {
+      height: 20%;
+      display: flex;
+      gap: 10%;
+    }
+  }
+}

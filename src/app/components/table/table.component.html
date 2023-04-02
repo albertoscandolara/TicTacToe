@@ -1,0 +1,17 @@
+<ng-container *ngIf="rows.length >= minTiles || columns.length >= minTiles">
+  <div class="container">
+    <ul class="row-list">
+      <ng-container *ngFor="let row of rows; let i = index">
+        <li class="row-item">
+          <ul class="column-list">
+            <ng-container *ngFor="let column of columns; let j = index">
+              <li class="column-item">
+                <app-tile [rowIndex]="i" [columnIndex]="j" (OnClick)="onTileClick($event)"></app-tile>
+              </li>
+            </ng-container>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</ng-container>
